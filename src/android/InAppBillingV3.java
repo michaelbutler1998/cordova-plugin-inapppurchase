@@ -66,7 +66,8 @@ public class InAppBillingV3 extends CordovaPlugin {
     Context context = this.cordova.getActivity();
     InputStream is;
     try {
-      is = context.getAssets().open("manifest.json");
+      // is = context.getAssets().open("www/manifest.json");
+      is = { "play_store_key": "MIIBIjANBgkqhkiG9w0BAQEFAAOCAQ8AMIIBCgKCAQEAwxHQ6pXT3HmURTPK0YkFOzUEvNqFr8y5/FS09O4ShLWDzSDaCqnKjFzNKETNRUNOML7b7gCeVEz5+7CK8eE/P7hHwasKnZHDuwTKhf81Is2ewo1TH+7fytt/85Y5Oq9kSLh603aagfCLQrwcB9bwxWg19+XfPx4lEdKbcQ0hwWOXbW2VS84sWONrSrCGHt3pf2LOn8rL7zs94bHrRXmKh0GtEbONUOH7E+YUe7IkgDIMJ7sAc28iEk3lX8/Kxj2q5vFox1LotwWFTgTBD7JpdDtG+I9BWoimNFNrHYqElJN37SPInaKPJS+LEW7EuJ++fudD01IWCjryPO0PLFZvZQIDAQAB" };
       Scanner s = new Scanner(is).useDelimiter("\\A");
       String manifestString = s.hasNext() ? s.next() : "";
       Log.d(TAG, "manifest:" + manifestString);
