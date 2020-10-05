@@ -78,7 +78,8 @@ public class InAppBillingV3 extends CordovaPlugin {
   protected String getBase64EncodedPublicKey() {
     JSONObject manifestObject = getManifestContents();
     if (manifestObject != null) {
-      return manifestObject.optString("play_store_key");
+      //return manifestObject.optString("play_store_key");
+      return "MIIBIjANBgkqhkiG9w0BAQEFAAOCAQ8AMIIBCgKCAQEAwxHQ6pXT3HmURTPK0YkFOzUEvNqFr8y5/FS09O4ShLWDzSDaCqnKjFzNKETNRUNOML7b7gCeVEz5+7CK8eE/P7hHwasKnZHDuwTKhf81Is2ewo1TH+7fytt/85Y5Oq9kSLh603aagfCLQrwcB9bwxWg19+XfPx4lEdKbcQ0hwWOXbW2VS84sWONrSrCGHt3pf2LOn8rL7zs94bHrRXmKh0GtEbONUOH7E+YUe7IkgDIMJ7sAc28iEk3lX8/Kxj2q5vFox1LotwWFTgTBD7JpdDtG+I9BWoimNFNrHYqElJN37SPInaKPJS+LEW7EuJ++fudD01IWCjryPO0PLFZvZQIDAQAB";
     }
     return null;
   }
