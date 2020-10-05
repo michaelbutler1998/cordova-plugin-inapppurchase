@@ -63,7 +63,9 @@ public class InAppBillingV3 extends CordovaPlugin {
   private JSONObject getManifestContents() {
     if (manifestObject != null) return manifestObject;
     try {
-      String manifestString = "MIIBIjANBgkqhkiG9w0BAQEFAAOCAQ8AMIIBCgKCAQEAwxHQ6pXT3HmURTPK0YkFOzUEvNqFr8y5/FS09O4ShLWDzSDaCqnKjFzNKETNRUNOML7b7gCeVEz5+7CK8eE/P7hHwasKnZHDuwTKhf81Is2ewo1TH+7fytt/85Y5Oq9kSLh603aagfCLQrwcB9bwxWg19+XfPx4lEdKbcQ0hwWOXbW2VS84sWONrSrCGHt3pf2LOn8rL7zs94bHrRXmKh0GtEbONUOH7E+YUe7IkgDIMJ7sAc28iEk3lX8/Kxj2q5vFox1LotwWFTgTBD7JpdDtG+I9BWoimNFNrHYqElJN37SPInaKPJS+LEW7EuJ++fudD01IWCjryPO0PLFZvZQIDAQAB";
+      //{ "play_store_key": "<Base64-encoded public key from the Google Play Store>" }
+      // String manifestString = "MIIBIjANBgkqhkiG9w0BAQEFAAOCAQ8AMIIBCgKCAQEAwxHQ6pXT3HmURTPK0YkFOzUEvNqFr8y5/FS09O4ShLWDzSDaCqnKjFzNKETNRUNOML7b7gCeVEz5+7CK8eE/P7hHwasKnZHDuwTKhf81Is2ewo1TH+7fytt/85Y5Oq9kSLh603aagfCLQrwcB9bwxWg19+XfPx4lEdKbcQ0hwWOXbW2VS84sWONrSrCGHt3pf2LOn8rL7zs94bHrRXmKh0GtEbONUOH7E+YUe7IkgDIMJ7sAc28iEk3lX8/Kxj2q5vFox1LotwWFTgTBD7JpdDtG+I9BWoimNFNrHYqElJN37SPInaKPJS+LEW7EuJ++fudD01IWCjryPO0PLFZvZQIDAQAB";
+      String manifestString = '{ "play_store_key": "MIIBIjANBgkqhkiG9w0BAQEFAAOCAQ8AMIIBCgKCAQEAwxHQ6pXT3HmURTPK0YkFOzUEvNqFr8y5/FS09O4ShLWDzSDaCqnKjFzNKETNRUNOML7b7gCeVEz5+7CK8eE/P7hHwasKnZHDuwTKhf81Is2ewo1TH+7fytt/85Y5Oq9kSLh603aagfCLQrwcB9bwxWg19+XfPx4lEdKbcQ0hwWOXbW2VS84sWONrSrCGHt3pf2LOn8rL7zs94bHrRXmKh0GtEbONUOH7E+YUe7IkgDIMJ7sAc28iEk3lX8/Kxj2q5vFox1LotwWFTgTBD7JpdDtG+I9BWoimNFNrHYqElJN37SPInaKPJS+LEW7EuJ++fudD01IWCjryPO0PLFZvZQIDAQAB" }'
       Log.d(TAG, "manifest:" + manifestString);
       manifestObject = new JSONObject(manifestString);
     } catch (JSONException e) {
